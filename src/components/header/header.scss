@@ -1,0 +1,69 @@
+@use 'ui/lib';
+@use 'ui/tokens';
+
+.header {
+    &,
+    &-spacer {
+        --height: var(--size-800);
+    }
+}
+
+.header {
+    @include lib.position(absolute, top);
+    width: 100vw;
+    z-index: 2;
+
+
+    &-container {
+        padding: var(--size-700) 0;
+
+        &--fixed {
+            @include lib.position(fixed, top);
+        }
+    }
+
+    &-logo {
+        height: var(--height);
+        overflow: hidden;
+
+        &-image {
+            height: 100%;
+        }
+    }
+
+    // Used On Pages To Shift Content Below Header
+    &-spacer {
+        height: var(--height);
+        margin: var(--size-700) 0 0;
+        width: 100%;
+
+        &--full {
+            margin: var(--size-700) 0;
+        }
+
+        &--min {
+            margin: 0;
+        }
+    }
+
+    &-user {
+        cursor: pointer;
+        height: var(--height);
+        margin-left: var(--border-width);
+
+        &-avatar {
+            background: var(--color-black-400);
+            border-radius: 100%;
+            height: var(--height);
+            pointer-events: none;
+            width: var(--height);
+            z-index: 10;
+        }
+
+        @include tokens.state(highlight) {
+            .header-user-avatar::after {
+                border-color: var(--color-primary-400);
+            }
+        }
+    }
+}
