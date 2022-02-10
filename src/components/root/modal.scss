@@ -1,0 +1,11 @@
+@use 'ui/tokens';
+
+.modal {
+    @include tokens.state(not-active) {
+        input,
+        label,
+        select {
+            pointer-events: none;
+        }
+    }
+}

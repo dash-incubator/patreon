@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+        <meta name='viewport' content='width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimal-ui'>
+
+        <link href='./favicon.ico' rel='icon'>
+        <link href='./css/themes/default.css' rel='stylesheet' type='text/css'>
+        <link href='./css/app.css' rel='stylesheet' type='text/css'>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+        <noscript>
+            Javascript Is Required To View This Website! <br />
+
+            <a href='https://www.enable-javascript.com/' target='_blank'>
+                Follow These Instructions To Enable Javascript In Your Web Browser.
+            </a>
+        </noscript>
+    </head>
+    <body>
+
+        <section
+            class='site'
+            data-bind='{"ref": "scrollbar.mount[],scrollbar.width.mount,scrollto.mount,site.container", "refs": {"controls": "site.controls", "scrollbar": "scrollbar.site"}}'
+            data-scroll='controls,scrollbar'
+            data-scrollbar
+        >
+            <header class="header --background --background-white-400 --border-bottom --border-grey-400 --border-width-300">
+                <div class="header-container">
+                    <div class="container --flex-horizontal-space-between --max-width-1200px">
+                        <div class="--flex-fill --flex-row --flex-vertical">
+                            <a class="header-logo --margin-right --margin-700" href="/">
+                                <img class="header-logo-image" src="./images/logo.png">
+                            </a>
+
+                            <div class="row --hidden --margin-top --margin-300 --visible:800px"></div>
+
+                            <div class="--flex-fill --max-width --max-width-320px" style='margin-top: -7px;margin-bottom: -7px;'>
+                                <div class="field field--border --border-border --border-grey-400 --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <div class="field-icon icon --color-border-400">
+                                            <svg width="16" height="16" viewBox="0 0 16 16"><path opacity=".9" d="M11.911 10.459l-.004.002c-.206.276-.432.54-.676.788-.243.24-.501.463-.771.668l2.752 2.75L14.546 16 16 14.546l-1.333-1.334-2.756-2.753z"/><path d="M1.988 1.993a6.83 6.83 0 008.878 10.327v.002c.271-.199.533-.414.777-.656.249-.25.467-.517.668-.788l.002-.002-.003-.003a6.826 6.826 0 00-1.457-9.545 6.826 6.826 0 00-8.865.665zm8.45 8.446a5.124 5.124 0 01-7.244-.17 5.121 5.121 0 01-.001-7.07 5.121 5.121 0 017.245 7.24z"/></svg>
+                                        </div>
+                                        <input class='field-tag' data-keydown='field.tag' placeholder='Search Creators' type='text' value=''>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row --hidden --margin-top --margin-600 --visible:800px"></div>
+
+                        <div>
+                            <div class="group group--offset-top --flex-vertical --margin-600">
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Home
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Explore
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        About
+                                    </div>
+                                </div>
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Log In
+                                    </div>
+                                </div>
+
+                                <div class="group-item">
+                                    <div class="button --background-primary --background-state --color-white --color-state --min-width-120px --padding-400">
+                                        Get Started
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class='page --flex-horizontal' data-bind='{"ref": "site.scrolltop"}' style='display: flex;'>
+                <div class="header-spacer header-spacer--full"></div>
+
+                <section class="--spacer-top --spacer-400">
+                    <div class="container --flex-row --max-width-1200px">
+
+                        <div class="--max-width --max-width-320px --width --width-full">
+                            <div class="card --border --border-grey-500 --border-width-300 --width-full">
+                                <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
+                                    Creator Settings
+                                </div>
+
+                                <div class="row --flex-column --padding --padding-horizontal-500 --padding-vertical-300">
+                                    <div class="--flex-start">
+                                        <div class="link --color-primary --color-state --color-text-400">
+                                            <div class="icon --margin-right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20" xml:space="preserve"><path d="M12 2c-1.313 0-2.614.259-3.827.761C6.96 3.264 5.857 4 4.929 4.929 3.054 6.804 2 9.348 2 12s1.054 5.195 2.929 7.071c.928.929 2.031 1.665 3.244 2.167C9.386 21.741 10.687 22 12 22c2.652 0 5.195-1.054 7.071-2.929C20.946 17.195 22 14.652 22 12c0-1.313-.259-2.614-.762-3.827C20.736 6.96 20 5.857 19.071 4.929 18.143 4 17.04 3.264 15.826 2.761 14.613 2.259 13.313 2 12 2zM7.07 18.279C7.5 17.38 10.12 16.5 12 16.5s4.5.88 4.93 1.779C15.53 19.396 13.791 20.002 12 20c-1.86 0-3.57-.641-4.93-1.721zm11.289-1.449C16.93 15.09 13.46 14.5 12 14.5s-4.93.59-6.36 2.33C4.576 15.445 4 13.746 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.641 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13c1.939 0 3.5-1.56 3.5-3.5S13.939 6 12 6zm0 5c-.398 0-.779-.158-1.061-.439S10.5 9.898 10.5 9.5s.158-.779.439-1.061S11.602 8 12 8s.779.158 1.061.439.439.663.439 1.061-.158.779-.439 1.061S12.398 11 12 11z"/></svg>
+                                            </div>
+                                            Creator Profile
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-start">
+                                        <div class="link --color-primary --color-state --color-text-400">
+                                            <div class="icon --margin-right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 20" xml:space="preserve"><path d="M13 15H4V8.5C4 6 6 4 8.5 4S13 6 13 8.5V15zm2-1V8.5c0-3.07-2.141-5.64-5-6.32V1.5c0-.398-.158-.779-.439-1.061S8.898 0 8.5 0s-.779.158-1.061.439S7 1.102 7 1.5v.68c-2.87.68-5 3.25-5 6.32V14l-2 2v1h17v-1l-2-2zm-6.5 6c.53 0 1.039-.211 1.414-.586S10.5 18.53 10.5 18h-4c0 .53.211 1.039.586 1.414S7.97 20 8.5 20z"/></svg>
+                                            </div>
+                                            Creator Notifications
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-start">
+                                        <div class="link --color-primary --color-state --color-text-400">
+                                            <div class="icon --margin-right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 16" xml:space="preserve"><path d="M14 0c2.121 0 4.156.843 5.656 2.343C21.157 3.843 22 5.878 22 8c0 2.121-.843 4.156-2.344 5.656C18.156 15.157 16.121 16 14 16s-4.157-.843-5.657-2.344C6.843 12.156 6 10.121 6 8c0-2.122.843-4.157 2.343-5.657S11.879 0 14 0zm0 14c1.592 0 3.117-.633 4.242-1.758C19.368 11.117 20 9.592 20 8c0-1.591-.632-3.117-1.758-4.243C17.117 2.632 15.592 2 14 2s-3.117.632-4.243 1.757C8.632 4.883 8 6.409 8 8c0 1.592.632 3.117 1.757 4.242C10.883 13.367 12.408 14 14 14zM2 8c0 1.24.385 2.449 1.101 3.461S4.831 13.238 6 13.65v2.09C2.55 14.85 0 11.73 0 8 0 4.27 2.55 1.15 6 .26v2.09C3.67 3.17 2 5.39 2 8z"/></svg>
+                                            </div>
+                                            Payment Settings
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-start">
+                                        <div class="link --color-primary --color-state --color-text-400">
+                                            <div class="icon --margin-right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15" xml:space="preserve"><path d="M14 13v2H0v-2s0-4 7-4 7 4 7 4zm-3.5-9.5c0-.692-.205-1.369-.59-1.944C9.525.98 8.979.531 8.339.267 7.7.001 6.996-.068 6.317.067c-.679.135-1.302.469-1.792.958-.49.49-.823 1.113-.958 1.792s-.066 1.383.2 2.022c.264.64.713 1.186 1.289 1.571C5.631 6.795 6.308 7 7 7c.928 0 1.818-.369 2.475-1.025.656-.657 1.025-1.547 1.025-2.475zM13.939 9c.615.476 1.118 1.08 1.475 1.771.356.692.556 1.452.586 2.229v2h4v-2s0-3.63-6.061-4zM13 0c-.688-.004-1.361.202-1.93.59.607.849.934 1.866.934 2.91s-.326 2.061-.934 2.91c.569.388 1.242.594 1.93.59.928 0 1.818-.369 2.475-1.025.656-.657 1.025-1.547 1.025-2.475s-.369-1.818-1.025-2.475C14.818.369 13.928 0 13 0z"/></svg>
+                                            </div>
+                                            Supporter Tiers
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-start">
+                                        <div class="link --color-primary --color-state --color-text-400">
+                                            <div class="icon --margin-right">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 21" xml:space="preserve"><path d="M8 16c-.53 0-1.039-.211-1.414-.586S6 14.53 6 14c0-1.109.89-2 2-2 .53 0 1.039.211 1.414.586S10 13.47 10 14s-.211 1.039-.586 1.414S8.53 16 8 16zm6 3V9H2v10h12zm0-12c.53 0 1.039.211 1.414.586S16 8.47 16 9v10c0 .53-.211 1.039-.586 1.414S14.53 21 14 21H2c-.53 0-1.039-.211-1.414-.586S0 19.53 0 19V9c0-1.11.89-2 2-2h1V5c0-1.326.527-2.598 1.464-3.536C5.402.527 6.674 0 8 0c.656 0 1.307.129 1.914.381.606.251 1.157.619 1.621 1.083.465.465.833 1.016 1.084 1.622C12.871 3.693 13 4.343 13 5v2h1zM8 2c-.796 0-1.559.316-2.121.879C5.316 3.441 5 4.204 5 5v2h6V5c0-.796-.316-1.559-.879-2.121C9.559 2.316 8.796 2 8 2z"/></svg>
+                                            </div>
+                                            Creator Security Settings
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button --border --border-grey --border-grey-500 --border-state --border-width-300 --margin-top --margin-400 --padding-500">
+                                <div class="icon --margin-right">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 20 20" xml:space="preserve"><path d="M12 2c-1.313 0-2.614.259-3.827.761C6.96 3.264 5.857 4 4.929 4.929 3.054 6.804 2 9.348 2 12s1.054 5.195 2.929 7.071c.928.929 2.031 1.665 3.244 2.167C9.386 21.741 10.687 22 12 22c2.652 0 5.195-1.054 7.071-2.929C20.946 17.195 22 14.652 22 12c0-1.313-.259-2.614-.762-3.827C20.736 6.96 20 5.857 19.071 4.929 18.143 4 17.04 3.264 15.826 2.761 14.613 2.259 13.313 2 12 2zM7.07 18.279C7.5 17.38 10.12 16.5 12 16.5s4.5.88 4.93 1.779C15.53 19.396 13.791 20.002 12 20c-1.86 0-3.57-.641-4.93-1.721zm11.289-1.449C16.93 15.09 13.46 14.5 12 14.5s-4.93.59-6.36 2.33C4.576 15.445 4 13.746 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.5-1.641 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13c1.939 0 3.5-1.56 3.5-3.5S13.939 6 12 6zm0 5c-.398 0-.779-.158-1.061-.439S10.5 9.898 10.5 9.5s.158-.779.439-1.061S11.602 8 12 8s.779.158 1.061.439.439.663.439 1.061-.158.779-.439 1.061S12.398 11 12 11z"/></svg>
+                                </div>
+                                User Settings
+                            </div>
+                        </div>
+
+                        <div class="--flex-fill --margin-left --margin-700">
+                            <div class="card --border --border-grey-500 --border-width-300 --width-full">
+                                <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
+                                    Profile Settings
+                                </div>
+
+                                <div class="row --flex-column --padding --padding-600">
+                                    <div class="--flex-row">
+                                        <b class="text --flex-end --max-width --padding-right --padding-500 --width --width-full" style='--max-width: 164px;'>
+                                            Username:
+                                        </b>
+
+                                        <div class="--flex-fill --max-width --max-width-320px">
+                                            JohnDoe
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-400">
+                                        <b class="text --flex-end --max-width --padding-right --padding-500 --width --width-full" style='--max-width: 164px;'>
+                                            Creator Photo:
+                                        </b>
+
+                                        <div class="--flex-fill --max-width --max-width-320px">
+                                            <img class="image --border-radius --border-radius-900" src="./images/index/avatar.png" alt="" style="height: 48px;width: 48px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-end --flex-row --margin-top --margin-500">
+                                        <div class="--background --background-grey-400 --border-radius --border-radius-500 --padding --padding-600">
+                                            Your username and profile photo are managed from your Dash account. <div class="link link--underline --color-primary --color-state --inline">More Info</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --margin-top --margin-500" data-focusinout="toggle">
+                                        <div class="field-title">
+                                            Title
+                                        </div>
+
+                                        <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                            <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                        </label>
+                                    </div>
+
+                                    <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --margin-top --margin-500" data-focusinout="toggle">
+                                        <div class="field-title">
+                                            Subtitle
+                                        </div>
+
+                                        <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                            <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                        </label>
+                                    </div>
+
+                                    <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --margin-top --margin-500" data-focusinout="toggle">
+                                        <div class="field-title">
+                                            Description
+                                        </div>
+
+                                        <label class="field-mask field-mask--textarea --margin-200">
+                                            <textarea class='field-tag' name="name" rows="8" cols="80"></textarea>
+                                        </label>
+                                    </div>
+
+                                    <div class="group group--grid --margin-500" data-grid='2'>
+                                        <div class="group-item">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <div class="field-title">
+                                                    Facebook
+                                                </div>
+
+                                                <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="group-item">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <div class="field-title">
+                                                    Twitter
+                                                </div>
+
+                                                <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="group-item">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <div class="field-title">
+                                                    Youtube
+                                                </div>
+
+                                                <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="group-item">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <div class="field-title">
+                                                    Odysee
+                                                </div>
+
+                                                <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-end --margin-top --margin-500">
+                                        <div class="button --background --background-primary --background-state --color-white --color-state --min-width-120px">
+                                            Save Changes
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card --border --border-grey-500 --border-width-300 --margin-top --margin-400 --width-full">
+                                <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
+                                    Notifications Settings
+                                </div>
+
+                                <div class="row --flex-column --padding --padding-600">
+                                    <div class="--flex-row">
+                                        <b class="text --flex-end --max-width --padding-right --padding-500 --width --width-full" style='--max-width: 164px;'>
+                                            Email address:
+                                        </b>
+
+                                        <div class="--flex-fill --max-width --max-width-320px">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' placeholder='Your email address' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-400">
+                                        <b class="text --flex-end --max-width --padding-right --padding-500 --width --width-full" style='--max-width: 164px;'>
+                                            Send Me:
+                                        </b>
+
+                                        <div class="--flex-fill --max-width --max-width-480px">
+                                            <div class="field --color-primary --flex-row" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    Daily summaries from my favourite creators
+                                                </div>
+                                            </div>
+
+                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' name='funding' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    Funding level alerts
+                                                </div>
+                                            </div>
+
+                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' name='curated' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    A weekly curated list of creators I might like
+                                                </div>
+                                            </div>
+
+                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' name='news' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    Occasional News about Sodality
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-600">
+                                        <div class="--max-width --width --width-full" style='--max-width: 164px;'></div>
+
+                                        <div class="--flex-fill --flex-start --max-width --max-width-320px">
+                                            <div class="button --background --background-primary --background-state --color-white --color-state --min-width-120px">
+                                                Save Changes
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card --border --border-grey-500 --border-width-300 --margin-top --margin-400 --width-full">
+                                <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
+                                    Payment Settings
+                                </div>
+
+                                <div class="row --flex-column --padding --padding-600">
+                                    <div class="--flex-row">
+                                        <b class="text --flex-end --max-width --padding-right --padding-500 --width --width-full" style='--max-width: 164px;'>
+                                            Bitcoin:
+                                        </b>
+
+                                        <div class="--flex-fill --max-width --max-width-320px">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class='--flex-vertical --padding-left --padding-400'>
+                                            <div class="field --color-primary --flex-row" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --flex-fixed --margin-0px --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    Enabled
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-600">
+                                        <b class="text --flex-end --max-width --padding-right --padding-500 --width --width-full" style='--max-width: 164px;'>
+                                            Dash:
+                                        </b>
+
+                                        <div class="--flex-fill --max-width --max-width-320px">
+                                            <div class="field field--border --border-border --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                                <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class='--flex-vertical --padding-left --padding-400'>
+                                            <div class="field --color-primary --flex-row" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --flex-fixed --margin-0px --pointer-events-auto">
+                                                    <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    Enabled
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-600">
+                                        <div class="--max-width --width --width-full" style='--max-width: 164px;'></div>
+
+                                        <div class="--flex-fill --flex-start --max-width --max-width-320px">
+                                            <div class="button --background --background-primary --background-state --color-white --color-state --min-width-120px">
+                                                Save Changes
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card --border --border-grey-500 --border-width-300 --margin-top --margin-400 --width-full">
+                                <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
+                                    Supporter Tiers
+                                </div>
+
+                                <div class="row --flex-column --padding --padding-600">
+                                    <div class="--flex-row">
+                                        <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --flex-fill --margin-right --margin-500" data-focusinout="toggle">
+                                            <div class="field-title">
+                                                Tier 1 Name
+                                            </div>
+
+                                            <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                            </label>
+                                        </div>
+
+                                        <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --max-width --max-width-120px" data-focusinout="toggle">
+                                            <div class="field-title">
+                                                Amount ( USD )
+                                            </div>
+
+                                            <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-600">
+                                        <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --flex-fill --margin-right --margin-500" data-focusinout="toggle">
+                                            <div class="field-title">
+                                                Tier 2 Name
+                                            </div>
+
+                                            <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                            </label>
+                                        </div>
+
+                                        <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --max-width --max-width-120px" data-focusinout="toggle">
+                                            <div class="field-title">
+                                                Amount ( USD )
+                                            </div>
+
+                                            <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-row --margin-top --margin-600">
+                                        <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --flex-fill --margin-right --margin-500" data-focusinout="toggle">
+                                            <div class="field-title">
+                                                Tier 3 Name
+                                            </div>
+
+                                            <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                            </label>
+                                        </div>
+
+                                        <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --max-width --max-width-120px" data-focusinout="toggle">
+                                            <div class="field-title">
+                                                Amount ( USD )
+                                            </div>
+
+                                            <label class="field-mask field-mask--input --flex-row --margin-200 --pointer-events-auto">
+                                                <input class='field-tag' data-keydown='field.tag' type='text' value=''>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="--flex-end --flex-row --margin-top --margin-600">
+                                        <div class="button --background --background-primary --background-state --color-white --color-state --min-width-120px">
+                                            Save Changes
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card --border --border-grey-500 --border-width-300 --margin-top --margin-400 --width-full">
+                                <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
+                                    Security Settings
+                                </div>
+
+                                <div class="row --flex-column --padding --padding-600">
+                                    <div class="text">
+                                        Enable two-factor authentication to secure your account
+                                    </div>
+
+                                    <div class="--flex-start --margin-top --margin-600">
+                                        <div class="button --background --background-primary --background-state --color-white --color-state --min-width-120px" data-bind='{"refs": {"modal": "settings.2fa"}}' data-click='modal'>
+                                            Setup 2FA
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class='--spacer-top --spacer-700' style='background-color: #F2F9FF;'>
+                    <div class="container --max-width-1200px">
+                        <div class="row --flex-horizontal-space-between --flex-vertical --spacer-vertical --spacer-500">
+                            <div class="--flex-fill --margin-right --margin-800">
+                                <h2 class="page-title" style='color: #111921;'>
+                                    Ready to to finish setting up your account?
+                                </h2>
+
+                                <span class="page-subtitle --margin-top --margin-200" style='color: #111921;'>
+                                    Publish your creator page in just 30 seconds.
+                                </span>
+                            </div>
+
+                            <div class="row --hidden --visible:800px --margin-top --margin-800"></div>
+
+                            <div class="button --background-primary --background-state --color-white --color-state --min-width-240px --padding-400">
+                                Continue Setup
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class='row --flex-center'>
+                    <div class="row --spacer-top --spacer-600"></div>
+
+                    <div class="container --flex-column:800px --flex-row --max-width-1200px">
+                        <div class='--flex-column --margin-right --margin-900 --max-width --max-width-320px --width --width-full:600px'>
+                            <a class="header-logo" href="/">
+                                <img class="header-logo-image" src="./images/logo.png">
+                            </a>
+
+                            <span class="text --margin-top --margin-300">
+                                Sodality was designed and built by the Dash Incubator community. &nbsp;
+                                <a href="#" class="link link--underline --color-primary --color-state --inline">
+                                    Find out more
+                                </a>
+                            </span>
+
+                            <div class="row --margin-top --margin-200">
+                                <a href="#" class="link --color-facebook --color-state --color-text-300 --margin-right --margin-400">
+                                    <div class="icon --size-500">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M6.302 16V8.702H3.847V5.857h2.455V3.76C6.302 1.325 7.788 0 9.958 0c1.041 0 1.938.077 2.194.112v2.544h-1.506c-1.185 0-1.41.562-1.41 1.385v1.816h2.813l-.364 2.844H9.236V16H6.302z"/></svg>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="link --color-twitter --color-state --color-text-300 --margin-right --margin-400">
+                                    <div class="icon --size-500">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M15.559 1.743a6.767 6.767 0 01-2.084.796 3.285 3.285 0 00-5.597 2.992 9.303 9.303 0 01-6.767-3.43A3.28 3.28 0 00.667 3.75a3.276 3.276 0 001.46 2.732 3.217 3.217 0 01-1.486-.41v.043a3.286 3.286 0 002.632 3.219c-.483.133-.989.15-1.482.057a3.29 3.29 0 003.065 2.279A6.583 6.583 0 010 13.029a9.24 9.24 0 005.032 1.474c6.036 0 9.341-5.001 9.341-9.339 0-.143-.005-.284-.012-.426A6.765 6.765 0 0016 3.04a6.725 6.725 0 01-1.889.518 3.314 3.314 0 001.448-1.815z"/></svg>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="link --color-discord --color-state --color-text-300 --margin-right --margin-400">
+                                    <div class="icon --size-500">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M10.186 2.288l-.19.221c2.329.699 3.414 1.727 3.414 1.727a11.42 11.42 0 00-4.127-1.302 11.563 11.563 0 00-2.769.027c-.084 0-.154.014-.234.027-.479.054-1.647.22-3.113.864-.506.22-.811.384-.811.384s1.125-1.084 3.595-1.784l-.137-.164s-1.864-.04-3.84 1.426c0 0-1.975 3.551-1.975 7.922 0 0 1.151 1.981 4.181 2.075 0 0 .509-.603.921-1.125-1.744-.521-2.4-1.606-2.4-1.606s.138.094.385.234c.014 0 .027.014.054.027.04.026.08.04.124.066.342.194.687.342 1.001.469a10.49 10.49 0 002.015.589 9.54 9.54 0 003.552.014 10.252 10.252 0 001.991-.589 7.835 7.835 0 001.573-.811s-.689 1.111-2.483 1.62c.412.509.91 1.098.91 1.098 3.026-.1 4.178-2.075 4.178-2.062 0-4.371-1.975-7.922-1.975-7.922-1.963-1.465-3.84-1.425-3.84-1.425zm-4.744 8.076c-.767 0-1.398-.669-1.398-1.508 0-.837.619-1.507 1.398-1.507.783 0 1.413.669 1.399 1.507.001.839-.615 1.508-1.399 1.508zm5.005 0c-.767 0-1.399-.669-1.399-1.508 0-.837.619-1.507 1.399-1.507.767 0 1.402.669 1.402 1.507.001.839-.619 1.508-1.402 1.508z"/></svg>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="link --color-youtube --color-state --color-text-300">
+                                    <div class="icon --size-500">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M15.84 4.8s-.156-1.104-.635-1.589c-.609-.638-1.291-.643-1.604-.679C11.361 2.371 8 2.371 8 2.371h-.005s-3.359 0-5.601.161c-.31.036-.994.041-1.601.679C.314 3.695.158 4.8.158 4.8S0 6.096 0 7.391v1.212c0 1.297.16 2.592.16 2.592s.156 1.104.635 1.591c.607.637 1.409.614 1.766.685 1.278.119 5.439.158 5.439.158s3.361-.006 5.602-.168c.313-.037.994-.041 1.604-.678.479-.486.635-1.588.635-1.588S16 9.898 16 8.604V7.391c0-1.298-.16-2.591-.16-2.591zm-9.492 5.274V5.578l4.322 2.255-4.322 2.241z"/></svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row --hidden --visible:800px --margin-top --margin-800"></div>
+
+                        <div class='--flex-row --width --width-full:600px' style='min-width: 33%'>
+                            <div class="--flex-column --margin-right --margin-900">
+                                <h3 class="page-title">
+                                    Explore
+                                </h3>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Writers & Journalists
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Gaming Creators
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Non-Profits
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Local Businesses
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Tutorials & Education
+                                </div>
+                            </div>
+
+                            <div class='--flex-column --margin-right --margin-900'>
+                                <h3 class="page-title">
+                                    &nbsp;
+                                </h3>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Podcasters
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Video Creators
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Musicians
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Visual Artists
+                                </div>
+
+                                <div class="link --color-primary --color-state --color-text-300 --inline --margin-top --margin-400">
+                                    Communities
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row --hidden --visible:800px --margin-top --margin-800"></div>
+
+                        <div class="--flex-column --flex-fill --width --width-full:600px">
+                            <h3 class="page-title">
+                                Newsletter
+                            </h3>
+                            <span class="page-subtitle --color-text-300 --margin-top">
+                                A curated list of our top creators and best content sent weekly, certified spam free.
+                            </span>
+
+                            <div class="--flex-fill --margin-top --margin-500 --max-width --max-width-320px">
+                                <div class="field field--border --border-border --border-grey-400 --border-radius-600 --border-state --flex-column" data-focusinout="toggle">
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag' data-keydown='field.tag' placeholder='Your email address' type='text' value=''>
+                                        <div class="field-icon icon --color-border-400">
+                                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M20 2C20 0.9 19.1 0 18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2ZM18 2L10 7L2 2H18ZM18 14H2V4L10 9L18 4V14Z" fill="#7F8C98"/>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row --spacer-top --spacer-400"></div>
+
+                    <div class="container --max-width-1200px">
+                        <div class="border --border-grey-500 --border-width-300 --margin-vertical --margin-600"></div>
+                    </div>
+
+                    <div class="row --margin-top --margin-100"></div>
+
+                    <div class="container --flex-column:800px --flex-horizontal-space-between --flex-row --max-width-1200px">
+
+                        <span class="text --color-text-300">
+                            &copy; 2020 Sodality. Some Rights Reserved.
+                        </span>
+
+                        <div class="row --hidden --visible:800px --margin-top --margin-500"></div>
+
+                        <div>
+                            <div class="group group--offset-top --margin-500">
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Home
+                                    </div>
+                                </div>
+
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        About
+                                    </div>
+                                </div>
+
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Terms Of Use
+                                    </div>
+                                </div>
+
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Privacy Policy
+                                    </div>
+                                </div>
+
+                                <div class="group-item">
+                                    <div class="link --color-primary --color-state --color-text-300 --inline">
+                                        Help
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row --spacer-top --spacer-600"></div>
+                </footer>
+            </section>
+
+            <section class="overlays">
+                <div class="modals" data-bind='{"ref": "modals.container", "refs": {"scrollbar": "scrollbar.modals"}}' data-click='modals,tooltip.detoggle' data-scroll='scrollbar' data-scrollbar style='--background: transparent'>
+                    <div class="banner" style='background-color: rgba(255,255,255, 0.7);pointer-events: none;position: fixed;'></div>
+
+                    <div class="modal" data-bind='{"ref": "settings.2fa"}' style='--max-size: 800px;'>
+                        <div class="card --background-white-400 --margin-vertical --margin-900 --padding --padding-900">
+                            <div class="row --flex-end">
+                                <div class="button --color-border --color-state --padding-0px" data-click='modals'>
+                                    <div class="icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3.527 14.948a.176.176 0 01-.248 0L1.051 12.72a.176.176 0 010-.248l11.42-11.419a.176.176 0 01.248 0l2.229 2.228a.174.174 0 010 .248L3.527 14.948z"/><path d="M12.472 14.948c.068.068.18.068.248 0l2.229-2.229a.176.176 0 000-.248L3.528 1.052a.176.176 0 00-.248 0L1.052 3.28a.176.176 0 000 .248l11.42 11.42z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row --flex-row">
+                                <div class="--flex-column" style='width: 320px'>
+                                    <img src="./images/qr.png" alt="" style='width: 100%;'>
+                                    <div class="text --color-primary-400 --flex-center --margin-top --margin-300 --text-300">
+                                        <b>Secret:</b> AGH19V1283JM
+                                    </div>
+                                </div>
+
+                                <div class="--flex-fill --flex-start --flex-vertical --padding-left --padding-500">
+                                    <div class="--flex-start">
+                                        <h5 class="page-title">
+                                            <span class="--text-crop-both" style='color: #012060;'>
+                                                Setup two-factor authentication
+                                            </span>
+                                        </h5>
+                                        <span class="page-subtitle --margin-top">
+                                            Using the authenticator app on your device, scan the code to the left or enter the secret to get set-up.
+                                        </span>
+
+                                        <div class="button --background-primary --background-state --color-white --color-state --margin-top --margin-500 --min-width-120px --padding-400" data-bind='{"refs": {"modal": "settings.2fa.confirm"}}' data-click='modal'>
+                                            Continue
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal" data-bind='{"ref": "settings.2fa.confirm"}' style='--max-size: 800px;'>
+                        <div class="card --background-white-400 --margin-vertical --margin-900 --padding --padding-900">
+                            <h5 class="page-title --flex-center">
+                                <span class="--text-crop-both" style='color: #012060;'>
+                                    Enter the code in your 2FA application to continue
+                                </span>
+                            </h5>
+
+                            <div class="row --flex-horizontal --margin-top --margin-500">
+                                <div class="field --border-bottom --border-border --border-primary-400 --border-state-inactive --flex-column --margin-right --margin-300" data-focusinout="toggle" style='width: 32px'>
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag --text-center' data-keydown='field.tag' max='9' min='0' type='number' value=''>
+                                    </label>
+                                </div>
+                                <div class="field --border-bottom --border-border --border-primary-400 --border-state-inactive --flex-column --margin-right --margin-300" data-focusinout="toggle" style='width: 32px'>
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag --text-center' data-keydown='field.tag' max='9' min='0' type='number' value=''>
+                                    </label>
+                                </div>
+                                <div class="field --border-bottom --border-border --border-primary-400 --border-state-inactive --flex-column --margin-right --margin-300" data-focusinout="toggle" style='width: 32px'>
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag --text-center' data-keydown='field.tag' max='9' min='0' type='number' value=''>
+                                    </label>
+                                </div>
+                                <div class="field --border-bottom --border-border --border-primary-400 --border-state-inactive --flex-column --margin-right --margin-300" data-focusinout="toggle" style='width: 32px'>
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag --text-center' data-keydown='field.tag' max='9' min='0' type='number' value=''>
+                                    </label>
+                                </div>
+                                <div class="field --border-bottom --border-border --border-primary-400 --border-state-inactive --flex-column --margin-right --margin-300" data-focusinout="toggle" style='width: 32px'>
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag --text-center' data-keydown='field.tag' max='9' min='0' type='number' value=''>
+                                    </label>
+                                </div>
+                                <div class="field --border-bottom --border-border --border-primary-400 --border-state-inactive --flex-column" data-focusinout="toggle" style='width: 32px'>
+                                    <label class="field-mask field-mask--input --flex-row --pointer-events-auto">
+                                        <input class='field-tag --text-center' data-keydown='field.tag' max='9' min='0' type='number' value=''>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="--flex-center">
+                                <div class="button --background-primary --background-state --color-white --color-state --margin-top --margin-500 --min-width-120px --padding-400">
+                                    Continue
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class='scrollbar scrollbar--fixed scrollbar--hidden' data-bind='{"ref": "scrollbar.site"}'></div>
+        </section>
+
+        <script src='./js/app.min.js'></script>
+    </body>
+</html>
