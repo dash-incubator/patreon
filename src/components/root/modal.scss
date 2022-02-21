@@ -2,10 +2,8 @@
 
 .modal {
     @include tokens.state(not-active) {
-        input,
-        label,
-        select {
-            pointer-events: none;
+        * {
+            pointer-events: none !important;
         }
     }
 }

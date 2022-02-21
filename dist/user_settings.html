@@ -158,14 +158,18 @@
                                             User Photo:
                                         </b>
 
-                                        <div class="--flex-fill --max-width --max-width-320px">
-                                            <img class="image --border-radius --border-radius-900" src="./images/index/avatar.png" alt="" style="height: 48px;width: 48px;">
-                                        </div>
-                                    </div>
+                                        <div class="--flex-column:1200px --flex-fill --flex-row">
+                                            <div class='--flex-vertical'>
+                                                <img class="image --border-radius --border-radius-900" src="./images/index/avatar.png" alt="" style="height: 48px;width: 48px;">
+                                            </div>
 
-                                    <div class="--flex-end --flex-row --margin-top --margin-500">
-                                        <div class="--background --background-grey-400 --border-radius --border-radius-500 --padding --padding-600">
-                                            Your username and profile photo are managed from your Dash account. <div class="link link--underline --color-primary --color-state --inline">More Info</div>
+                                            <div class="row --hidden --margin-vertical --margin-400 --visible:1200px"></div>
+
+                                            <div class="--margin-left --margin-500">
+                                                <div class="--background --background-grey-400 --border-radius --border-radius-500 --padding --padding-600">
+                                                    Your username and profile photo are managed from your Dash account. <div class="link link--underline --color-primary --color-state --inline">More Info</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -198,7 +202,7 @@
 
                                         <div class="--flex-fill --max-width --max-width-480px">
                                             <div class="field --color-primary --flex-row" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
                                                     <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
                                                 </label>
 
@@ -208,7 +212,7 @@
                                             </div>
 
                                             <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
                                                     <input class='field-tag' data-keydown='field.tag' name='funding' type='checkbox' value=''>
                                                 </label>
 
@@ -218,7 +222,7 @@
                                             </div>
 
                                             <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
                                                     <input class='field-tag' data-keydown='field.tag' name='curated' type='checkbox' value=''>
                                                 </label>
 
@@ -228,7 +232,7 @@
                                             </div>
 
                                             <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
                                                     <input class='field-tag' data-keydown='field.tag' name='news' type='checkbox' value=''>
                                                 </label>
 

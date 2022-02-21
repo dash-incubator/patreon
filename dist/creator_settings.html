@@ -157,7 +157,7 @@
                         <div class="--flex-fill --margin-left --margin-700">
                             <div class="card --border --border-grey-500 --border-width-300 --width-full">
                                 <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
-                                    Profile Settings
+                                    Creator Page
                                 </div>
 
                                 <div class="row --flex-column --padding --padding-600">
@@ -176,15 +176,41 @@
                                             Creator Photo:
                                         </b>
 
-                                        <div class="--flex-fill --max-width --max-width-320px">
-                                            <img class="image --border-radius --border-radius-900" src="./images/index/avatar.png" alt="" style="height: 48px;width: 48px;">
+                                        <div class="--flex-column:1200px --flex-fill --flex-row">
+                                            <div class='--flex-vertical'>
+                                                <img class="image --border-radius --border-radius-900" src="./images/index/avatar.png" alt="" style="height: 48px;width: 48px;">
+                                            </div>
+
+                                            <div class="row --hidden --margin-vertical --margin-400 --visible:1200px"></div>
+
+                                            <div class="--margin-left --margin-500">
+                                                <div class="--background --background-grey-400 --border-radius --border-radius-500 --padding --padding-600">
+                                                    Your username and profile photo are managed from your Dash account. <div class="link link--underline --color-primary --color-state --inline">More Info</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="--flex-end --flex-row --margin-top --margin-500">
-                                        <div class="--background --background-grey-400 --border-radius --border-radius-500 --padding --padding-600">
-                                            Your username and profile photo are managed from your Dash account. <div class="link link--underline --color-primary --color-state --inline">More Info</div>
+                                    <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --margin-top --margin-500" data-focusinout="toggle">
+                                        <div class="field-title">
+                                            Header Image
                                         </div>
+
+                                        <section style='background: url(./images/creator/banner.png) center center no-repeat transparent;background-size: cover;border-radius: 8px;height: 164px;margin-top: 8px;'>
+                                            <div class="row --flex-end --padding --padding-300">
+                                                <div class="button --background-black --background-state --color-state --color-white --margin-right --margin-100 --padding-200">
+                                                    <div class="icon --size-300">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" xml:space="preserve"><path d="M1.385 12.397a1.542 1.542 0 0 0 1.538 1.538h6.153a1.54 1.54 0 0 0 1.538-1.538v-9.23H1.385v9.23zm1.538-7.691h6.153v7.691H2.923V4.706zM8.691.86l-.77-.769H4.077L3.308.86H.616v1.538h10.768V.86H8.691z"/></svg>
+                                                    </div>
+                                                </div>
+
+                                                <div class="button --background-primary --background-state --color-state --color-white --padding-200">
+                                                    <div class="icon --size-300">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" xml:space="preserve"><path d="M3.705 5.35v4.59h4.59V5.35h3.061L6-.005.645 5.35h3.06zM6 2.137 7.684 3.82h-.918v4.59h-1.53V3.82h-.919L6 2.137zm5.355 9.333H.645V13h10.71v-1.53z"/></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
                                     </div>
 
                                     <div class="field field--border --border-border --border-radius-600 --border-state --flex-column --margin-top --margin-500" data-focusinout="toggle">
@@ -277,7 +303,7 @@
 
                             <div class="card --border --border-grey-500 --border-width-300 --margin-top --margin-400 --width-full">
                                 <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
-                                    Notifications Settings
+                                    Creator Notifications
                                 </div>
 
                                 <div class="row --flex-column --padding --padding-600">
@@ -302,42 +328,42 @@
 
                                         <div class="--flex-fill --max-width --max-width-480px">
                                             <div class="field --color-primary --flex-row" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
+                                                    <input class='field-tag' data-keydown='field.tag' name='new' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    New supporter alerts
+                                                </div>
+                                            </div>
+
+                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
+                                                    <input class='field-tag' data-keydown='field.tag' name='tips' type='checkbox' value=''>
+                                                </label>
+
+                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
+                                                    Weekly tips to help me gain more supporters
+                                                </div>
+                                            </div>
+
+                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
                                                     <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
                                                 </label>
 
                                                 <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
-                                                    Daily summaries from my favourite creators
+                                                    Weekly supporter summary
                                                 </div>
                                             </div>
 
                                             <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
-                                                    <input class='field-tag' data-keydown='field.tag' name='funding' type='checkbox' value=''>
+                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-none">
+                                                    <input class='field-tag' data-keydown='field.tag' name='support' type='checkbox' value=''>
                                                 </label>
 
                                                 <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
-                                                    Funding level alerts
-                                                </div>
-                                            </div>
-
-                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
-                                                    <input class='field-tag' data-keydown='field.tag' name='curated' type='checkbox' value=''>
-                                                </label>
-
-                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
-                                                    A weekly curated list of creators I might like
-                                                </div>
-                                            </div>
-
-                                            <div class="field --color-primary --flex-row --margin-top --margin-300" data-click="toggle">
-                                                <label class="field-mask field-mask--checkmark --margin-0px --pointer-events-auto">
-                                                    <input class='field-tag' data-keydown='field.tag' name='news' type='checkbox' value=''>
-                                                </label>
-
-                                                <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
-                                                    Occasional News about Sodality
+                                                    New crypto support alerts ( so you can add your payout address )
                                                 </div>
                                             </div>
                                         </div>
@@ -377,7 +403,7 @@
                                         <div class='--flex-vertical --padding-left --padding-400'>
                                             <div class="field --color-primary --flex-row" data-click="toggle">
                                                 <label class="field-mask field-mask--checkmark --flex-fixed --margin-0px --pointer-events-auto">
-                                                    <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
+                                                    <input class='field-tag' data-keydown='field.tag' name='payment-bitcoin' type='checkbox' value=''>
                                                 </label>
 
                                                 <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
@@ -403,7 +429,7 @@
                                         <div class='--flex-vertical --padding-left --padding-400'>
                                             <div class="field --color-primary --flex-row" data-click="toggle">
                                                 <label class="field-mask field-mask--checkmark --flex-fixed --margin-0px --pointer-events-auto">
-                                                    <input class='field-tag' data-keydown='field.tag' name='summary' type='checkbox' value=''>
+                                                    <input class='field-tag' data-keydown='field.tag' name='payment-dash' type='checkbox' value=''>
                                                 </label>
 
                                                 <div class="field-title --flex-fill --flex-vertical" style='font-weight: 400'>
@@ -507,7 +533,7 @@
 
                             <div class="card --border --border-grey-500 --border-width-300 --margin-top --margin-400 --width-full">
                                 <div class="text --border-grey-500 --border-bottom --border-width-300 --padding --padding-horizontal-600 --padding-vertical-500 --text-bold --text-center --text-500">
-                                    Security Settings
+                                    Creator Security Settings
                                 </div>
 
                                 <div class="row --flex-column --padding --padding-600">
